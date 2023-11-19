@@ -31,10 +31,11 @@ int dequeue() {
 
 void peek() {
     if (front == rear) {
-        return;
+        printf("Queue is empty\n");
     }
-
-    printf("%d\n", queue[front]);
+    else {
+        printf("%d\n", queue[front]);
+    }
 }
 
 void Clear() {
@@ -44,7 +45,7 @@ void Clear() {
 
 void printQueue() {
     if (front == rear) {
-        return;
+        printf("Queue is empty\n");
     }
 
     for (int i = front; i < rear; i++) {
