@@ -20,8 +20,11 @@ void enqueue(int data) {
 
 int dequeue() {
     if (front == rear) {
+        front=-1;
+        rear=-1;
         return -1;
     }
+
     else{
         int data = queue[front];
         front++;
