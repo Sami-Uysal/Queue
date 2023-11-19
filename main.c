@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #define QUEUE_SIZE 5
 
 int queue[QUEUE_SIZE];
@@ -42,8 +44,13 @@ void Clear() {
     front = -1;
     rear = -1;
 }
+void ScreenClear() {
+    sleep(1);
+    system("cls");
+}
 
 void printQueue() {
+    printf("Queue: ");
     if (front == rear) {
         printf("Queue is empty\n");
     }
@@ -104,6 +111,7 @@ int main() {
                 printf("Wrong choice\n");
                 break;
         }
+        ScreenClear();
     }while(choice != 0);
 
     return 0;
