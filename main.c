@@ -8,7 +8,7 @@ int front = -1;
 int rear = -1;
 
 void enqueue(int data) {
-    if (rear == QUEUE_SIZE) {
+    if (rear == QUEUE_SIZE-1 ) {
         printf("Queue is full\n");
     }
     else {
